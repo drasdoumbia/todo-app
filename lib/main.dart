@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screens/fetch_data_page.dart';
+
 void main() {
   runApp(App());
 }
@@ -14,8 +16,11 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Container(
-        child: Text("Networking with Flutter"),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Todo Demo"),
+        ),
+        body: FetchDataPage(),
       ),
     );
   }
